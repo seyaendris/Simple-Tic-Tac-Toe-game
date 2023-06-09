@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+#gameboard {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: solid 2px black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+.cross {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform:rotate(45deg) ;
+}
+.cross:before, .cross:after {
+content: "";
+position: absolute;
+background-color: red;
+}
+.cross:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+.cross:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
